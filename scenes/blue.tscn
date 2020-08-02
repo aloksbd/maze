@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://images/blue.png" type="Texture" id=1]
 [ext_resource path="res://scripts/blue.gd" type="Script" id=2]
+[ext_resource path="res://scripts/rewind.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.00822, 8.06722 )
@@ -156,13 +157,13 @@ animation = "idleUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=14]
 blend_point_0/node = SubResource( 10 )
-blend_point_0/pos = Vector2( -1, 0 )
+blend_point_0/pos = Vector2( 1, 0 )
 blend_point_1/node = SubResource( 11 )
-blend_point_1/pos = Vector2( 1, 0 )
+blend_point_1/pos = Vector2( -1, 0 )
 blend_point_2/node = SubResource( 12 )
-blend_point_2/pos = Vector2( 0, 1.1 )
+blend_point_2/pos = Vector2( 0, -1.1 )
 blend_point_3/node = SubResource( 13 )
-blend_point_3/pos = Vector2( 0, -1.1 )
+blend_point_3/pos = Vector2( 0, 1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
@@ -181,13 +182,13 @@ animation = "walkRight"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=19]
 blend_point_0/node = SubResource( 15 )
-blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_0/pos = Vector2( 0, -1.1 )
 blend_point_1/node = SubResource( 16 )
-blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_1/pos = Vector2( 0, 1.1 )
 blend_point_2/node = SubResource( 17 )
-blend_point_2/pos = Vector2( -1, 0 )
+blend_point_2/pos = Vector2( 1, 0 )
 blend_point_3/node = SubResource( 18 )
-blend_point_3/pos = Vector2( 1, 0 )
+blend_point_3/pos = Vector2( -1, 0 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
@@ -236,3 +237,6 @@ active = true
 parameters/playback = SubResource( 23 )
 parameters/idle/blend_position = Vector2( 0, 0 )
 parameters/walk/blend_position = Vector2( 0, 0 )
+
+[node name="rewind" type="Node2D" parent="."]
+script = ExtResource( 3 )
