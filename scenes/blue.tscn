@@ -240,3 +240,6 @@ parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="rewind" type="Node2D" parent="."]
 script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

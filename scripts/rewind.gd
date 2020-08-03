@@ -7,9 +7,11 @@ enum{
 
 var state = RECORD
 var moves = []
+var animations = []
 
-func record(move):
+func record(move,animation):
 	moves.append(move)
+	animations.append(animation)
 
 func rewind():
 	state = REWIND
@@ -25,4 +27,8 @@ func _physics_process(delta):
 	if move == null:
 		move = Vector2.ZERO
 	get_parent().moveTo(move)
+	
+	var animation = animations.pop_back()
+	if moves.size() > 1:
+		get_parent().animateTo(animations[-1])
 	
