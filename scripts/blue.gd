@@ -9,9 +9,6 @@ onready var animationState = $AnimationTree.get("parameters/playback")
 
 func _physics_process(delta):
 	
-	if Input.is_action_just_pressed("ui_accept"):
-		$rewind.rewind()
-	
 	if $rewind.state == 0:
 		input_vector.x = -Input.get_action_strength("ui_right") + Input.get_action_strength("ui_left")
 		input_vector.y = -Input.get_action_strength("ui_down") + Input.get_action_strength("ui_up")
@@ -39,3 +36,6 @@ func moveTo(move):
 	
 func animateTo(move):
 	animation_vector = move
+	
+func rewind():
+	$rewind.rewind()

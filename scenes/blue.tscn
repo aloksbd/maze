@@ -5,7 +5,7 @@
 [ext_resource path="res://scripts/rewind.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.42735, 4.76886 )
+extents = Vector2( 4.60233, 5.41876 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "idleDown"
@@ -243,4 +243,3 @@ script = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.85, 0.85 )
