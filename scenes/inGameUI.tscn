@@ -34,9 +34,9 @@ text = "X 3"
 [node name="TextureRect2" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -13.0
+margin_left = -16.0
 margin_top = 8.0
-margin_right = -3.0
+margin_right = -6.0
 margin_bottom = 17.0
 texture = ExtResource( 3 )
 

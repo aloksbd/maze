@@ -16,7 +16,7 @@ func _physics_process(delta):
 		input_vector.y = -Input.get_action_strength("ui_down") + Input.get_action_strength("ui_up")
 		if input_vector != Vector2.ZERO:
 			animation_vector = input_vector
-		$rewind.record(input_vector,animation_vector)
+		$rewind.record(input_vector,animation_vector,position)
 	
 	if input_vector != Vector2.ZERO:
 		$AnimationTree.set("parameters/idle/blend_position",animation_vector)
@@ -26,6 +26,8 @@ func _physics_process(delta):
 		velocity = input_vector * max_speed
 		if $rewind.state == 1:
 			velocity = input_vector * -max_speed
+			if $rewind.dontMove:
+				velocity = Vector2.ZERO
 	else:
 		animationState.travel("idle")
 		velocity = Vector2.ZERO
