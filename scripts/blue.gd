@@ -4,12 +4,14 @@ const max_speed = 80
 var velocity = Vector2()
 var input_vector = Vector2.ZERO
 var animation_vector = Vector2.ZERO
+var rewinding = false
 
 onready var animationState = $AnimationTree.get("parameters/playback")
 
 func _physics_process(delta):
-	
+	rewinding = true
 	if $rewind.state == 0:
+		rewinding = false
 		input_vector.x = -Input.get_action_strength("ui_right") + Input.get_action_strength("ui_left")
 		input_vector.y = -Input.get_action_strength("ui_down") + Input.get_action_strength("ui_up")
 		if input_vector != Vector2.ZERO:
@@ -39,3 +41,4 @@ func animateTo(move):
 	
 func rewind():
 	$rewind.rewind()
+	$AnimationPlayer.play("blink")

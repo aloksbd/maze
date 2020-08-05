@@ -22,4 +22,13 @@ func _physics_process(delta):
 
 func _on_npc_body_entered(body):
 	if "blue" in body.name:
-		body.rewind()
+		if body.rewinding:
+			return
+		get_tree().paused=true
+		yield(get_tree().create_timer(0.5),"timeout")
+		get_tree().paused=false
+		if get_node("/root/testLevel/CanvasLayer/inGameUI").rewind():
+			body.rewind()
+		else: 
+			get_tree().change_scene("res://scenes/menu.tscn")
+		

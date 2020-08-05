@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/blue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/wallTile.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/ground.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/clock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/test.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/inGameUI.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -96,3 +97,7 @@ lookahead = 0.001
 
 [node name="blue" parent="." instance=ExtResource( 1 )]
 position = Vector2( 131.501, 71.0387 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="inGameUI" parent="CanvasLayer" instance=ExtResource( 8 )]
