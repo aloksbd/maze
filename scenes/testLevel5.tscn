@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/blue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/wallTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/mark.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/npc.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/clock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/inGameUI.tscn" type="PackedScene" id=7]
 
 [node name="testLevel" type="Node2D"]
 
@@ -18,3 +21,39 @@ tile_data = PoolIntArray( -1966106, 0, 0, -1966105, 0, 2, -1966103, 0, 0, -19661
 
 [node name="blue" parent="." instance=ExtResource( 1 )]
 position = Vector2( -153.034, -225.418 )
+
+[node name="npc" parent="." instance=ExtResource( 5 )]
+position = Vector2( -153.034, -184 )
+
+[node name="clocks" type="Node2D" parent="."]
+
+[node name="clock" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -96, -232 )
+
+[node name="clock2" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -88, -232 )
+
+[node name="clock3" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -80, -232 )
+
+[node name="clock4" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -72, -232 )
+
+[node name="clock5" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -64, -232 )
+
+[node name="clock6" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -56, -232 )
+
+[node name="clock7" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -48, -232 )
+
+[node name="clock8" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -40, -232 )
+
+[node name="clock9" parent="clocks" instance=ExtResource( 6 )]
+position = Vector2( -32, -232 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="inGameUI" parent="CanvasLayer" instance=ExtResource( 7 )]
