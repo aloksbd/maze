@@ -35,7 +35,7 @@ func rewind() -> bool:
 		$gameover.visible = true
 		yield(get_tree().create_timer(1.5),"timeout")
 		get_tree().paused=false
-		get_tree().change_scene("res://scenes/menu.tscn")
+		get_tree().change_scene("res://scenes/postGameLose.tscn")
 	else:
 		clock -= 1
 		$Label.text = "X " + str(clock)
@@ -49,4 +49,4 @@ func gameCompleted():
 	$win.visible = true
 	yield(get_tree().create_timer(1.5),"timeout")
 	get_tree().paused=false
-	get_tree().change_scene("res://scenes/menu.tscn")
+	get_tree().change_scene("res://scenes/postGameWin.tscn")
