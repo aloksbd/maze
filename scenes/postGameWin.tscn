@@ -9,7 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="winStory" type="RichTextLabel" parent="."]
@@ -22,7 +23,7 @@ margin_top = -146.0
 margin_right = 160.0
 margin_bottom = 146.0
 custom_fonts/normal_font = ExtResource( 1 )
-text = "story when win"
+text = "Congratulations Little Blue you remembered all answers and can go well on test tomorow!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
