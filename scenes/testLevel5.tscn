@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/blue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/wallTile.tscn" type="PackedScene" id=2]
@@ -8,11 +8,12 @@
 [ext_resource path="res://scenes/clock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/inGameUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/test.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/superTest.tscn" type="PackedScene" id=9]
 
 [node name="testLevel" type="Node2D"]
 
 [node name="Ground" parent="." instance=ExtResource( 4 )]
-position = Vector2( 436.407, 510.369 )
+position = Vector2( 440, 512 )
 
 [node name="mark" parent="." instance=ExtResource( 3 )]
 visible = false
@@ -89,6 +90,7 @@ position = Vector2( -32, -232 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="inGameUI" parent="CanvasLayer" instance=ExtResource( 7 )]
+totalTest = 20
 
 [node name="tests" type="Node2D" parent="."]
 
@@ -171,3 +173,18 @@ position = Vector2( -153.034, -184 )
 
 [node name="npc6" parent="Npc" instance=ExtResource( 5 )]
 position = Vector2( -153.034, -184 )
+
+[node name="npc7" parent="Npc" instance=ExtResource( 5 )]
+position = Vector2( -153.034, -184 )
+
+[node name="npc8" parent="Npc" instance=ExtResource( 5 )]
+position = Vector2( -153.034, -184 )
+
+[node name="npc9" parent="Npc" instance=ExtResource( 5 )]
+position = Vector2( -153.034, -184 )
+
+[node name="npc10" parent="Npc" instance=ExtResource( 5 )]
+position = Vector2( -153.034, -184 )
+
+[node name="superTest" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1192, 1272 )

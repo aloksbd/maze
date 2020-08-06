@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://images/Clock.png" type="Texture" id=1]
 [ext_resource path="res://crackers.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://scripts/inGameUI.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
 font_data = ExtResource( 2 )
 
 [node name="inGameUI" type="Control"]
@@ -30,6 +34,9 @@ margin_right = 45.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
 text = "X 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 anchor_left = 0.5
@@ -62,6 +69,35 @@ margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
 text = "00000"
 align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameover" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.0
+margin_top = -18.0
+margin_right = 88.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "Game Over"
+
+[node name="win" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -166.0
+margin_top = -18.0
+margin_right = 166.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "CONGRATULATIONS!!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }

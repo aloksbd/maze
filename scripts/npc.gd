@@ -112,9 +112,9 @@ func _on_npc_body_entered(body):
 			return
 		get_tree().paused=true
 		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().paused=false
-		if get_node("/root/testLevel/CanvasLayer/inGameUI").rewind():
+		var gameover = get_node("/root/testLevel/CanvasLayer/inGameUI").rewind()
+		if !gameover:
+			get_tree().paused=false
 			body.rewind()
-		else: 
-			get_tree().change_scene("res://scenes/menu.tscn")
+		
 		

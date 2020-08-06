@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://crackers.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://menuFont.tres" type="DynamicFont" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -15,14 +16,15 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -122.0
-margin_top = -117.0
-margin_right = 72.0
-margin_bottom = 4.0
+margin_left = -128.0
+margin_top = -120.0
+margin_right = 73.0
+margin_bottom = 5.0
 rect_scale = Vector2( 1.2721, 1.91761 )
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.690196, 0.866667, 1, 1 )
@@ -37,6 +39,40 @@ Movement :  WASD
 
 
 press ENTER to play..."
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -116.0
+margin_right = 168.0
+margin_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Hello Blue, well done on that school test yesterday! Can you remember how you got the answers?
+Be carefull with your anxiety tho, it'll push you backwards!
+
+Objective :
+Collect TEST itens and use CLOCK for more anxiety encounters.
+
+Movement :  WASD / arrows
+"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -84.0
+margin_top = -42.0
+margin_right = 84.0
+margin_bottom = -24.0
+custom_fonts/font = ExtResource( 3 )
+text = "press ENTER to play"
