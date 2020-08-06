@@ -19,14 +19,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -56.0
-margin_top = -44.0
-margin_right = 64.0
-margin_bottom = 24.0
+margin_left = -122.0
+margin_top = -117.0
+margin_right = 72.0
+margin_bottom = 4.0
+rect_scale = Vector2( 1.2721, 1.91761 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "Instruction of the game:
-blah blah blah....
+custom_colors/default_color = Color( 0.690196, 0.866667, 1, 1 )
+text = "Hello Blue, well done on that school test yesterday! Can you remember how you got the answers?
+Be carefull with your anxiety tho, it'll push you backwards!
+
+Objective :
+Collect TEST itens and use CLOCK for more anxiety encounters.
+
+Movement :  WASD
 
 
 
-press enter to play"
+press ENTER to play..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
