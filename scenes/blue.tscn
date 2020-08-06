@@ -5,7 +5,7 @@
 [ext_resource path="res://scripts/rewind.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.60233, 5.41876 )
+extents = Vector2( 5.09009, 6.45399 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "blink"
@@ -218,6 +218,7 @@ graph_offset = Vector2( 113.22, 0 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=24]
 
 [node name="blue" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -227,6 +228,7 @@ hframes = 6
 frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0497742, 0.447944 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -253,3 +255,13 @@ script = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -4, 0 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( 4, 0 )
+enabled = true
+cast_to = Vector2( 0, 8 )

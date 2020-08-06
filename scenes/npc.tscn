@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/npc.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.99891, 7.49117 )
+extents = Vector2( 8, 8 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "idleDown"
@@ -214,7 +214,6 @@ hframes = 6
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 0.0103636 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -234,4 +233,14 @@ active = true
 parameters/playback = SubResource( 23 )
 parameters/idle/blend_position = Vector2( 0, 0 )
 parameters/walk/blend_position = Vector2( 0, 0 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 3, 0 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( -3, 0 )
+enabled = true
+cast_to = Vector2( 0, 8 )
 [connection signal="body_entered" from="." to="." method="_on_npc_body_entered"]
