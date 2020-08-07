@@ -23,9 +23,9 @@ func _physics_process(delta):
 		$AnimationTree.set("parameters/walk/blend_position",animation_vector)
 		animationState.travel("walk")
 		input_vector = input_vector.normalized()
-		velocity = input_vector * max_speed
+		velocity = input_vector * -max_speed
 		if $rewind.state == 1:
-			velocity = input_vector * -max_speed
+			velocity = input_vector * max_speed
 			if $rewind.dontMove:
 				velocity = Vector2.ZERO
 	else:

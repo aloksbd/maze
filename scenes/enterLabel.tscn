@@ -2,7 +2,7 @@
 
 [ext_resource path="res://menuFont.tres" type="DynamicFont" id=1]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "blink"
 length = 2.0
 loop = true
@@ -36,4 +36,4 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/blink = SubResource( 2 )
+anims/blink = SubResource( 1 )

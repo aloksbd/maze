@@ -57,11 +57,11 @@ margin_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/normal_font = ExtResource( 2 )
-text = "Hello Blue, well done on that school test yesterday! Can you remember how you got the answers?
+text = "Hello Little Blue,  so here we are, our final school test, can you remeber where you stored the right answers in your mind?
 Be carefull with your anxiety tho, it'll push you backwards!
 
 Objective :
-Collect TEST itens and use CLOCK for more anxiety encounters.
+Collect TEST itens and use CLOCK to survive more anxiety encounters.
 
 Movement :  WASD / arrows
 "
