@@ -43,4 +43,5 @@ func animateTo(move):
 	
 func rewind():
 	$rewind.rewind()
+	$AudioStreamPlayer.play()
 	$AnimationPlayer.play("blink")

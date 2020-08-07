@@ -19,6 +19,7 @@ func record(move,animation,pos):
 
 func rewind():
 	state = REWIND
+	
 	yield(get_tree().create_timer(3), "timeout")
 	moves.clear()
 	state = RECORD

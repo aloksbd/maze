@@ -9,6 +9,7 @@ export var nextLevel = ""
 
 func _ready():
 	timer()
+	$AudioStreamPlayer4.play()
 	$Label.text = "X " + str(clock)
 	$Label2.text = str(test) + "/" + str(totalTest)
 	
@@ -21,11 +22,13 @@ func timer():
 	timer()
 
 func clockCollected():
+	$AudioStreamPlayer.play()
 	clock += 1
 	$Label.text = "X " + str(clock)
 	
 	
 func testCollected():
+	$AudioStreamPlayer2.play()
 	test += 1
 	$Label2.text = str(test) + "/" + str(totalTest)
 
