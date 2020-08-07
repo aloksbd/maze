@@ -4,8 +4,8 @@
 [ext_resource path="res://scripts/blue.gd" type="Script" id=2]
 [ext_resource path="res://scripts/rewind.gd" type="Script" id=3]
 
-[sub_resource type="CircleShape2D" id=25]
-radius = 6.76571
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 5.09009, 6.45399 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "blink"
@@ -228,7 +228,7 @@ hframes = 6
 frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.149212, -0.546456 )
+position = Vector2( 0.0497742, 0.447944 )
 shape = SubResource( 25 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -254,7 +254,6 @@ parameters/walk/blend_position = Vector2( 0, 0 )
 script = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0.298321, 0.0994396 )
 current = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -263,6 +262,6 @@ enabled = true
 cast_to = Vector2( 0, 8 )
 
 [node name="RayCast2D2" type="RayCast2D" parent="."]
-position = Vector2( 4, 0.0994415 )
+position = Vector2( 4, 0 )
 enabled = true
 cast_to = Vector2( 0, 8 )

@@ -5,6 +5,7 @@ var test = 0
 export var totalTest = 3
 var time = 0
 var gameover = false
+export var nextLevel = ""
 
 func _ready():
 	timer()
@@ -49,4 +50,7 @@ func gameCompleted():
 	$win.visible = true
 	yield(get_tree().create_timer(1.5),"timeout")
 	get_tree().paused=false
-	get_tree().change_scene("res://scenes/postGameWin.tscn")
+	if nextLevel == "":
+		get_tree().change_scene("res://scenes/postGameWin.tscn")
+	else:
+		get_tree().change_scene("res://scenes/"+nextLevel+".tscn")
