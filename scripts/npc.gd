@@ -1,6 +1,6 @@
 extends Area2D
 
-export var xMin = -27
+export var xMin = -25
 export var xMax = 153
 export var yMin = -31
 export var yMax = 155
